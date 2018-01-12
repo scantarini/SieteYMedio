@@ -79,13 +79,15 @@ public:
 	Player(int m); // Provided constructor
 
 	void SetBank(int newBankBalance);			// Modifies the amount of money the player has
-	int GetBank() const; // Returns the amount of money the player has
+	int GetBank() const;					    // Returns the amount of money the player has
+	void SetBet();
 
 	// You decide what functions you'll need...
 
 private:
 	int money;
 	Hand playerHand;
+	int bet;
 	// You decide what extra fields (if any) you'll need...
 };
 

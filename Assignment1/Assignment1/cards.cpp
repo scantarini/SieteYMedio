@@ -148,6 +148,7 @@ Player class
 // Implemente the member functions of the Player class here.
 Player::Player()
 {
+	bet = 0;
 	SetBank(100);
 }
 // This is the implementation for the provided constructor. It is not necessary.
@@ -155,11 +156,40 @@ Player::Player(int m)
 {
 	money = m;
 }
+
+// This modifies the amount of money the player has
 void Player::SetBank(int newBankBalance)
 {
 	money += newBankBalance;
 }
+
+// This returns the amount of money the player has
 int Player::GetBank() const
 {
 	return money;
+}
+
+void Player::SetBet()
+{
+	bool acceptableInput = false;
+
+	// Takes in the player's bet
+	// Error checks for negative numbers, non-integer types, and inputs that exceed the amount of money the player has.
+	do 
+	{
+		cout << "You have $" << GetBank() << ". ";
+		cout << "Enter bet: ";
+		if (!(cin >> bet))
+		{
+			cin.clear();
+			cin.ignore(10000, '\n');
+			cout << "Invalid: Input must be a number. Please try again\n";
+		}
+		else if (!bet)
+			cout << "Invalid: Player cannot bet $0. Please try again.\n";
+		else if (bet < 0)
+			cout << "Invalid: Input must be positve. Please try again.\n";
+		else
+			acceptableInput = true;
+	} while (!acceptableInput);
 }
