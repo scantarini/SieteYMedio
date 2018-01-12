@@ -20,6 +20,9 @@ int main() {
 
 	Player you;
 	Player dealer;
+	ofstream output;
+	output.open("");
+	output.close();
 
 	return 0;
 }
