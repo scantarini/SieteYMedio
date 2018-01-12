@@ -19,5 +19,9 @@ using namespace std;
 // Stub for main
 int main() {
 	/* --STATEMENTS-- */
+
+	Player You;
+	Player Dealer;
+
 	return 0;
 }
