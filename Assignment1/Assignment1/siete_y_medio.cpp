@@ -16,12 +16,10 @@ using namespace std;
 // Non member functions implementations (if any)
 
 
-// Stub for main
 int main() {
-	/* --STATEMENTS-- */
 
-	Player You;
-	Player Dealer;
+	Player you;
+	Player dealer;
 
 	return 0;
 }
